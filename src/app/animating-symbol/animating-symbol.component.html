@@ -1,0 +1,16 @@
+<div class="w3-container">  
+  <button class="w3-button w3-teal" (click)="pauseVehicle()">Pause</button>
+      <button class="w3-button w3-green" [disabled]="startInterval !== null" (click)="startVehicle()">Play</button>
+      <button class="w3-button w3-red" [disabled]="startInterval == null" (click)="stopVehicle()">STOP</button><br>
+      <label>Enter Time To Complete Trip in Seconds</label>  
+      <input  class="w3-input" type="number" [(ngModel)] = "timeToTraverse" placeholder="Seconds">
+</div>
+  <div id="map"></div>
+      
+<style>
+  #map {
+
+    height: 500px;
+    margin-top: 20px;
+  }
+</style>
