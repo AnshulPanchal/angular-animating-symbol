@@ -21,7 +21,8 @@ export class AnimatingSymbolComponent implements AfterViewInit {
    }
 
   ngAfterViewInit() {
-    this.initializeMap();
+    setTimeout(()=>{
+          this.initializeMap();
     var driverPath = [
       new google.maps.LatLng(12.9177, 77.6233),
       new google.maps.LatLng(12.9226, 77.6174),
@@ -30,6 +31,8 @@ export class AnimatingSymbolComponent implements AfterViewInit {
       new google.maps.LatLng(12.9385, 77.6308)
     ];
    this.createPolyline(driverPath);
+    }, 2000);
+
   }
 
   initializeMap() {
